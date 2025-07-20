@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nana Chang – Projects Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .projects-container { max-width: 900px; margin: 2em auto; background: #fff; padding: 2em; border-radius: 8px; box-shadow: 0 2px 8px #eee; }
+    .project-block { margin-bottom: 2.5em; }
+    .project-title { font-size: 1.25em; color: #003366; margin-bottom: 0.1em; }
+    .project-date { font-size: 0.97em; color: #555; margin-bottom: 0.4em; }
+    .project-goal { font-weight: bold; margin-bottom: 0.3em; }
+    .project-achievements { margin-bottom: 0.5em; }
+    .project-pictures { display: flex; gap: 1em; flex-wrap: wrap; margin-bottom: 1em; }
+    .project-pictures img { width: 200px; max-width: 100%; border: 1px solid #eee; border-radius: 6px; background: #fafafa; }
+    @media (max-width: 700px) {
+      .projects-container { padding: 1em; }
+      .project-pictures { flex-direction: column; gap: 0.7em; }
+      .project-pictures img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="projects-container">
+    <h1>Projects Portfolio</h1>
+
+    <!-- EEG Controlled Bipedal Robot -->
+    <div class="project-block">
+      <div class="project-title">EEG Controlled Bipedal Robot</div>
+      <div class="project-date">9/2024 – Present</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Integrating EEG signals with a deep learning model for movement classification and precise motor control</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Optimized robot structure with CAD design through SolidWorks for enhanced stability and mobility</li>
+        <li>3D printed components for prototyping</li>
+        <li>PCB design for the overcurrent protection circuit, ensuring reliable power management</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/eeg_robot1.jpg" alt="EEG Robot Photo 1">
+        <img src="assets/eeg_robot2.jpg" alt="EEG Robot Photo 2">
+      </div>
+    </div>
+
+    <!-- Adaptive Swing Footrest for Wheelchair -->
+    <div class="project-block">
+      <div class="project-title">Adaptive Swing Footrest for Wheelchair</div>
+      <div class="project-date">1/2025 – 4/2025</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Design a footrest mechanism that supports natural leg motion while ensuring stability and user comfort</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Designed the footrest mechanism using SolidWorks and fabricated components through 3D printing</li>
+        <li>Conducted iterative testing and Failure Modes and Effects Analysis</li>
+        <li>Integrated material selection and cost analysis to enhance durability, recyclability, and affordability</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/footrest1.jpg" alt="Footrest Photo 1">
+        <img src="assets/footrest2.jpg" alt="Footrest Photo 2">
+        <img src="assets/footrest3.jpg" alt="Footrest Photo 3">
+      </div>
+    </div>
+
+    <!-- Generative Design Optimization of Bracket -->
+    <div class="project-block">
+      <div class="project-title">Generative Design Optimization of Bracket</div>
+      <div class="project-date">4/2025</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Redesign a Ti-6Al-4V aircraft bracket for additive manufacturing to reduce weight and material waste</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Conducted generative design and stress analysis in Fusion 360 under defined load cases</li>
+        <li>Selected optimal design based on factor of safety and von Mises stress vs. mass</li>
+        <li>Improved printability and reduced waste by optimizing for 3D printing and high-volume production</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/bracket1.jpg" alt="Bracket Photo 1">
+        <img src="assets/bracket2.jpg" alt="Bracket Photo 2">
+        <img src="assets/bracket3.jpg" alt="Bracket Photo 3">
+      </div>
+    </div>
+
+    <!-- EMG Processing & Circuit Simulation -->
+    <div class="project-block">
+      <div class="project-title">EMG Processing & Circuit Simulation</div>
+      <div class="project-date">1/2025</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Acquiring and processing EMG signals for real-time device control using MATLAB and Arduino</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Acquired and processed EMG signals using MATLAB and Arduino for muscle activation control</li>
+        <li>Demonstrated real-time EMG-based device control of LEDs and servo motors</li>
+        <li>Designed and simulated an EMG processing circuit in LTSpice, optimizing signal clarity with amplifiers and filters</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/emg1.jpg" alt="EMG Photo 1">
+        <img src="assets/emg2.jpg" alt="EMG Photo 2">
+      </div>
+    </div>
+
+    <!-- Deep Learning SEM Image Segmentation -->
+    <div class="project-block">
+      <div class="project-title">Deep Learning SEM Image Segmentation</div>
+      <div class="project-date">4/2024 – 8/2024</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Automate the segmentation of types of lacunae in trabecular bone SEM images</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Trained and optimized U-Net model in Dragonfly</li>
+        <li>Evaluated model performance in MATLAB, achieving 98% accuracy and 71% Dice coefficient</li>
+        <li>Presented findings to academic peers through meetings and poster sessions</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/sem1.jpg" alt="SEM Segmentation Photo 1">
+        <img src="assets/sem2.jpg" alt="SEM Segmentation Photo 2">
+      </div>
+    </div>
+
+    <!-- 3D Resin Printing of Trabecular Bone Structures -->
+    <div class="project-block">
+      <div class="project-title">3D Resin Printing of Trabecular Bone Structures</div>
+      <div class="project-date">4/2024 – 8/2024</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Develop a reliable method to resin 3D print trabecular bone structures for future mechanical testing</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Processed microCT data and created printable STL models using SolidWorks and AnyCubic software</li>
+        <li>Optimized resin print parameters to improve structural fidelity across bone types</li>
+        <li>Demonstrated high geometric fidelity through image registration and voxel-wise analysis</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/boneprint1.jpg" alt="Resin Print Photo 1">
+        <img src="assets/boneprint2.jpg" alt="Resin Print Photo 2">
+        <img src="assets/boneprint3.jpg" alt="Resin Print Photo 3">
+      </div>
+    </div>
+
+    <!-- Automation of Cell Aspiration -->
+    <div class="project-block">
+      <div class="project-title">Automation of Cell Aspiration</div>
+      <div class="project-date">1/2024 – 4/2024</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Develop a high precision negative pressure control device for accurate cell aspiration</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Designed sensing circuit using instrumentation amplifier and pressure sensor for accurate pressure readings</li>
+        <li>Verified and validated prototype through comprehensive mechanical, electrical, and code assessments</li>
+        <li>Assessed risk, failure modes, and conducted requirements testing to ensure system reliability</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/aspiration1.jpg" alt="Cell Aspiration Photo 1">
+        <img src="assets/aspiration2.jpg" alt="Cell Aspiration Photo 2">
+      </div>
+    </div>
+
+    <!-- Motion Monitoring with IMU -->
+    <div class="project-block">
+      <div class="project-title">Motion Monitoring with IMU</div>
+      <div class="project-date">1/2024 – 4/2024</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Analyze cycling motion consistency at different speeds and quantify performance</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Analyzed cycling motion consistency at various speeds using MATLAB</li>
+        <li>Quantified performance by filtering and standardizing data to calculate root mean square error</li>
+        <li>Collected body segment locomotion data with Inertial Measurement Units (IMUs) on smartphones</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/imu1.jpg" alt="IMU Project Photo 1">
+        <img src="assets/imu2.jpg" alt="IMU Project Photo 2">
+      </div>
+    </div>
+
+    <!-- Deadlift Augmentation Device -->
+    <div class="project-block">
+      <div class="project-title">Deadlift Augmentation Device</div>
+      <div class="project-date">9/2023 – 12/2023</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Conduct a comprehensive joint moment analysis of deadlifts to improve posture and prevent injury</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Directed joint moment analysis in MATLAB, using marker-less motion capture via OpenPose</li>
+        <li>Identified the hip joint as bearing the highest load, with a peak moment of 730 Nm when lifting 65lb</li>
+        <li>Engineered a wearable sensor vest for posture improvement and injury prevention data collection</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/deadlift1.jpg" alt="Deadlift Project Photo 1">
+        <img src="assets/deadlift2.jpg" alt="Deadlift Project Photo 2">
+      </div>
+    </div>
+
+    <!-- Impact Detecting Device -->
+    <div class="project-block">
+      <div class="project-title">Impact Detecting Device</div>
+      <div class="project-date">1/2023</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Design a sensor-based system to detect and understand whiplash injuries through head and neck kinetic impact data</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Conducted in-depth research on biomechanics to inform system development</li>
+        <li>Designed sensor-based methods to collect head and neck kinetic impact data for injury analysis</li>
+        <li>Collaborated on the overall device design to detect and understand whiplash</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/impact1.jpg" alt="Impact Device Photo 1">
+      </div>
+    </div>
+
+    <!-- Bike lane route -->
+    <div class="project-block">
+      <div class="project-title">Bike Lane Route</div>
+      <div class="project-date">10/2022</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Evaluate and select the optimal bike lane route in Vancouver based on multiple criteria to meet stakeholder needs</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Collaborated with a team to evaluate and select the best bike lane routes using data analysis and stakeholder engagement</li>
+        <li>Determined the optimal route by balancing the needs of the stakeholders, ensuring robust decision-making</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/bikelane1.jpg" alt="Bike Lane Photo 1">
+        <img src="assets/bikelane2.jpg" alt="Bike Lane Photo 2">
+      </div>
+    </div>
+
+    <!-- Cardboard chair design -->
+    <div class="project-block">
+      <div class="project-title">Cardboard Chair Design</div>
+      <div class="project-date">9/2022</div>
+      <div class="project-goal">Project Goal:</div>
+      <div>Design a functional, minimalistic, and compact cardboard chair based on stakeholder needs</div>
+      <div class="project-goal">Key Achievements:</div>
+      <ul class="project-achievements">
+        <li>Collaborated on the design of the cardboard chair, incorporating feedback and ideas from stakeholders</li>
+        <li>Analyzed stakeholder needs to generate prototype solutions that met design and usability criteria</li>
+        <li>Utilized prototyping techniques to create a physical model for evaluation and refinement</li>
+      </ul>
+      <div class="project-pictures">
+        <img src="assets/cardboard1.jpg" alt="Cardboard Chair Photo 1">
+        <img src="assets/cardboard2.jpg" alt="Cardboard Chair Photo 2">
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

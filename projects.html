@@ -6,283 +6,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <style>
-    .project-gallery {
+    .projects-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 2em 2%;
+      gap: 2em;
+      justify-content: center;
       margin: 2em auto;
       max-width: 1200px;
-      justify-content: center;
     }
     .project-card {
-      width: 48%;
-      margin-bottom: 2.5em;
+      width: 45%;
+      min-width: 320px;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 2px 8px #eee;
-      overflow: hidden;
-      position: relative;
-      transition: box-shadow 0.2s;
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2em;
     }
-    .project-card:hover {
-      box-shadow: 0 4px 18px #ddd;
-    }
-    .project-image-main {
+    .project-card img {
       width: 100%;
-      height: 300px;
-      object-fit: cover;
-      display: block;
-      border-bottom: 2px solid #f0f0f0;
+      max-width: 500px;
+      height: auto;
+      border-radius: 10px;
       cursor: pointer;
+      object-fit: cover;
+      transition: box-shadow 0.2s;
+      box-shadow: 0 4px 20px #eee;
     }
     .project-title {
-      text-align: center;
       font-weight: bold;
-      font-size: 1.18em;
-      margin: 1em 0 0.2em 0;
+      font-size: 1.2em;
+      margin: 0.8em 0 0.2em 0;
+      text-align: center;
       color: #003366;
     }
-    .project-date {
-      text-align: center;
-      font-size: 0.97em;
-      color: #666;
-      margin-bottom: 0.6em;
-    }
-    @media (max-width: 800px) {
-      .project-card { width: 98%; }
-      .project-gallery { gap: 2em 0; }
+    @media (max-width: 900px) {
+      .projects-grid { flex-direction: column; gap: 1.5em; }
+      .project-card { width: 95%; min-width: unset; }
+      .project-card img { max-width: 100%; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Engineering & Research Projects</h1>
+    <h1>My Projects</h1>
   </header>
   <main>
-    <div class="project-gallery">
-
-      <!-- Example Project Card: EEG Controlled Bipedal Robot -->
+    <div class="projects-grid">
+      <!-- EEG Controlled Bipedal Robot -->
       <div class="project-card">
-        <a href="eeg-bipedal-robot.html">
-          <img src="assets/eeg_robot1.jpg" alt="EEG Controlled Bipedal Robot" class="project-image-main">
+        <a href="project-eeg-robot.html">
+          <img src="assets/eeg_robot1.jpg" alt="EEG Controlled Bipedal Robot">
         </a>
         <div class="project-title">EEG Controlled Bipedal Robot</div>
-        <div class="project-date">9/2024 – Present</div>
       </div>
-      <div class="project-card">
-        <a href="eeg-bipedal-robot.html">
-          <img src="assets/eeg_robot2.jpg" alt="EEG Controlled Bipedal Robot" class="project-image-main">
-        </a>
-        <div class="project-title">EEG Controlled Bipedal Robot</div>
-        <div class="project-date">9/2024 – Present</div>
-      </div>
-
       <!-- Exoskeleton Validation with Simulation -->
       <div class="project-card">
-        <a href="exoskeleton-validation.html">
-          <img src="assets/exoskeleton1.jpg" alt="Exoskeleton Validation with Simulation" class="project-image-main">
+        <a href="project-exoskeleton-sim.html">
+          <img src="assets/exoskeleton_sim1.jpg" alt="Exoskeleton Validation with Simulation">
         </a>
         <div class="project-title">Exoskeleton Validation with Simulation</div>
-        <div class="project-date">5/2025 – Present</div>
       </div>
-      <div class="project-card">
-        <a href="exoskeleton-validation.html">
-          <img src="assets/exoskeleton2.jpg" alt="Exoskeleton Validation with Simulation" class="project-image-main">
-        </a>
-        <div class="project-title">Exoskeleton Validation with Simulation</div>
-        <div class="project-date">5/2025 – Present</div>
-      </div>
-
       <!-- Adaptive Swing Footrest for Wheelchair -->
       <div class="project-card">
-        <a href="adaptive-footrest.html">
-          <img src="assets/footrest1.jpg" alt="Adaptive Swing Footrest for Wheelchair" class="project-image-main">
+        <a href="project-swing-footrest.html">
+          <img src="assets/swing_footrest1.jpg" alt="Adaptive Swing Footrest for Wheelchair">
         </a>
         <div class="project-title">Adaptive Swing Footrest for Wheelchair</div>
-        <div class="project-date">1/2025 – 4/2025</div>
       </div>
-      <div class="project-card">
-        <a href="adaptive-footrest.html">
-          <img src="assets/footrest2.jpg" alt="Adaptive Swing Footrest for Wheelchair" class="project-image-main">
-        </a>
-        <div class="project-title">Adaptive Swing Footrest for Wheelchair</div>
-        <div class="project-date">1/2025 – 4/2025</div>
-      </div>
-      <div class="project-card">
-        <a href="adaptive-footrest.html">
-          <img src="assets/footrest3.jpg" alt="Adaptive Swing Footrest for Wheelchair" class="project-image-main">
-        </a>
-        <div class="project-title">Adaptive Swing Footrest for Wheelchair</div>
-        <div class="project-date">1/2025 – 4/2025</div>
-      </div>
-
       <!-- Generative Design Optimization of Bracket -->
       <div class="project-card">
-        <a href="generative-bracket.html">
-          <img src="assets/bracket1.jpg" alt="Generative Design Optimization of Bracket" class="project-image-main">
+        <a href="project-bracket-gen-design.html">
+          <img src="assets/bracket_design1.jpg" alt="Generative Design Optimization of Bracket">
         </a>
         <div class="project-title">Generative Design Optimization of Bracket</div>
-        <div class="project-date">4/2025</div>
       </div>
-      <div class="project-card">
-        <a href="generative-bracket.html">
-          <img src="assets/bracket2.jpg" alt="Generative Design Optimization of Bracket" class="project-image-main">
-        </a>
-        <div class="project-title">Generative Design Optimization of Bracket</div>
-        <div class="project-date">4/2025</div>
-      </div>
-      <div class="project-card">
-        <a href="generative-bracket.html">
-          <img src="assets/bracket3.jpg" alt="Generative Design Optimization of Bracket" class="project-image-main">
-        </a>
-        <div class="project-title">Generative Design Optimization of Bracket</div>
-        <div class="project-date">4/2025</div>
-      </div>
-
       <!-- EMG Processing & Circuit Simulation -->
       <div class="project-card">
-        <a href="emg-processing.html">
-          <img src="assets/emg1.jpg" alt="EMG Processing & Circuit Simulation" class="project-image-main">
+        <a href="project-emg-processing.html">
+          <img src="assets/emg_processing1.jpg" alt="EMG Processing & Circuit Simulation">
         </a>
         <div class="project-title">EMG Processing & Circuit Simulation</div>
-        <div class="project-date">1/2025</div>
       </div>
-      <div class="project-card">
-        <a href="emg-processing.html">
-          <img src="assets/emg2.jpg" alt="EMG Processing & Circuit Simulation" class="project-image-main">
-        </a>
-        <div class="project-title">EMG Processing & Circuit Simulation</div>
-        <div class="project-date">1/2025</div>
-      </div>
-
       <!-- Deep Learning SEM Image Segmentation -->
       <div class="project-card">
-        <a href="sem-segmentation.html">
-          <img src="assets/sem1.jpg" alt="Deep Learning SEM Image Segmentation" class="project-image-main">
+        <a href="project-sem-segmentation.html">
+          <img src="assets/sem_segmentation1.jpg" alt="Deep Learning SEM Image Segmentation">
         </a>
         <div class="project-title">Deep Learning SEM Image Segmentation</div>
-        <div class="project-date">4/2024 – 8/2024</div>
       </div>
-      <div class="project-card">
-        <a href="sem-segmentation.html">
-          <img src="assets/sem2.jpg" alt="Deep Learning SEM Image Segmentation" class="project-image-main">
-        </a>
-        <div class="project-title">Deep Learning SEM Image Segmentation</div>
-        <div class="project-date">4/2024 – 8/2024</div>
-      </div>
-
       <!-- 3D Resin Printing of Trabecular Bone Structures -->
       <div class="project-card">
-        <a href="resin-printing.html">
-          <img src="assets/resin1.jpg" alt="3D Resin Printing of Trabecular Bone Structures" class="project-image-main">
+        <a href="project-3d-resin-bone.html">
+          <img src="assets/resin_bone1.jpg" alt="3D Resin Printing of Trabecular Bone Structures">
         </a>
         <div class="project-title">3D Resin Printing of Trabecular Bone Structures</div>
-        <div class="project-date">4/2024 – 8/2024</div>
       </div>
-      <div class="project-card">
-        <a href="resin-printing.html">
-          <img src="assets/resin2.jpg" alt="3D Resin Printing of Trabecular Bone Structures" class="project-image-main">
-        </a>
-        <div class="project-title">3D Resin Printing of Trabecular Bone Structures</div>
-        <div class="project-date">4/2024 – 8/2024</div>
-      </div>
-      <div class="project-card">
-        <a href="resin-printing.html">
-          <img src="assets/resin3.jpg" alt="3D Resin Printing of Trabecular Bone Structures" class="project-image-main">
-        </a>
-        <div class="project-title">3D Resin Printing of Trabecular Bone Structures</div>
-        <div class="project-date">4/2024 – 8/2024</div>
-      </div>
-
       <!-- Automation of Cell Aspiration -->
       <div class="project-card">
-        <a href="cell-aspiration.html">
-          <img src="assets/cell1.jpg" alt="Automation of Cell Aspiration" class="project-image-main">
+        <a href="project-cell-aspiration.html">
+          <img src="assets/cell_aspiration1.jpg" alt="Automation of Cell Aspiration">
         </a>
         <div class="project-title">Automation of Cell Aspiration</div>
-        <div class="project-date">1/2024 – 4/2024</div>
       </div>
-      <div class="project-card">
-        <a href="cell-aspiration.html">
-          <img src="assets/cell2.jpg" alt="Automation of Cell Aspiration" class="project-image-main">
-        </a>
-        <div class="project-title">Automation of Cell Aspiration</div>
-        <div class="project-date">1/2024 – 4/2024</div>
-      </div>
-
       <!-- Motion Monitoring with IMU -->
       <div class="project-card">
-        <a href="imu-monitoring.html">
-          <img src="assets/imu1.jpg" alt="Motion Monitoring with IMU" class="project-image-main">
+        <a href="project-motion-imu.html">
+          <img src="assets/motion_imu1.jpg" alt="Motion Monitoring with IMU">
         </a>
         <div class="project-title">Motion Monitoring with IMU</div>
-        <div class="project-date">1/2024 – 4/2024</div>
       </div>
-      <div class="project-card">
-        <a href="imu-monitoring.html">
-          <img src="assets/imu2.jpg" alt="Motion Monitoring with IMU" class="project-image-main">
-        </a>
-        <div class="project-title">Motion Monitoring with IMU</div>
-        <div class="project-date">1/2024 – 4/2024</div>
-      </div>
-
       <!-- Deadlift Augmentation Device -->
       <div class="project-card">
-        <a href="deadlift-augmentation.html">
-          <img src="assets/deadlift1.jpg" alt="Deadlift Augmentation Device" class="project-image-main">
+        <a href="project-deadlift-augmentation.html">
+          <img src="assets/deadlift1.jpg" alt="Deadlift Augmentation Device">
         </a>
         <div class="project-title">Deadlift Augmentation Device</div>
-        <div class="project-date">9/2023 – 12/2023</div>
       </div>
-      <div class="project-card">
-        <a href="deadlift-augmentation.html">
-          <img src="assets/deadlift2.jpg" alt="Deadlift Augmentation Device" class="project-image-main">
-        </a>
-        <div class="project-title">Deadlift Augmentation Device</div>
-        <div class="project-date">9/2023 – 12/2023</div>
-      </div>
-
       <!-- Impact Detecting Device -->
       <div class="project-card">
-        <a href="impact-detection.html">
-          <img src="assets/impact1.jpg" alt="Impact Detecting Device" class="project-image-main">
+        <a href="project-impact-detect.html">
+          <img src="assets/impact_detect1.jpg" alt="Impact Detecting Device">
         </a>
         <div class="project-title">Impact Detecting Device</div>
-        <div class="project-date">1/2023</div>
       </div>
-
-      <!-- Bike Lane Route -->
+      <!-- Bike lane route -->
       <div class="project-card">
-        <a href="bike-lane-route.html">
-          <img src="assets/bikelane1.jpg" alt="Bike Lane Route" class="project-image-main">
+        <a href="project-bike-lane.html">
+          <img src="assets/bike_lane1.jpg" alt="Bike lane route">
         </a>
-        <div class="project-title">Bike Lane Route</div>
-        <div class="project-date">10/2022</div>
+        <div class="project-title">Bike lane route</div>
       </div>
+      <!-- Cardboard chair design -->
       <div class="project-card">
-        <a href="bike-lane-route.html">
-          <img src="assets/bikelane2.jpg" alt="Bike Lane Route" class="project-image-main">
+        <a href="project-cardboard-chair.html">
+          <img src="assets/cardboard_chair1.jpg" alt="Cardboard chair design">
         </a>
-        <div class="project-title">Bike Lane Route</div>
-        <div class="project-date">10/2022</div>
-      </div>
-
-      <!-- Cardboard Chair Design -->
-      <div class="project-card">
-        <a href="cardboard-chair.html">
-          <img src="assets/chair1.jpg" alt="Cardboard Chair Design" class="project-image-main">
-        </a>
-        <div class="project-title">Cardboard Chair Design</div>
-        <div class="project-date">9/2022</div>
-      </div>
-      <div class="project-card">
-        <a href="cardboard-chair.html">
-          <img src="assets/chair2.jpg" alt="Cardboard Chair Design" class="project-image-main">
-        </a>
-        <div class="project-title">Cardboard Chair Design</div>
-        <div class="project-date">9/2022</div>
+        <div class="project-title">Cardboard chair design</div>
       </div>
     </div>
   </main>
+  <footer>
+    <p>&copy; 2025 Nana Chang</p>
+  </footer>
 </body>
 </html>

@@ -5,59 +5,68 @@
   <title>Projects – Nana Chang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <style>
+    <style>
     .projects-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 2em;
       justify-content: center;
+      max-width: 1200px;
       margin: 2em auto;
-      max-width: 1300px;
     }
     .project-card {
       width: 28%;
-      min-width: 210px;
+      min-width: 220px;
       background: #fff;
-      border-radius: 12px;
+      border-radius: 10px;
       box-shadow: 0 2px 8px #eee;
       padding: 1em;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 2em;
+      box-sizing: border-box;
     }
     .project-card img {
       width: 100%;
-      max-width: 250px;
-      height: 180px;
-      border-radius: 10px;
-      cursor: pointer;
+      max-width: 220px;
+      height: 150px;
+      border-radius: 8px;
       object-fit: cover;
+      cursor: pointer;
       transition: box-shadow 0.2s;
       box-shadow: 0 4px 20px #eee;
     }
     .project-title {
       font-weight: bold;
-      font-size: 1.1em;
-      margin: 0.7em 0 0.2em 0;
+      font-size: 1.08em;
+      margin: 0.6em 0 0.2em 0;
       text-align: center;
       color: #003366;
     }
     @media (max-width: 1050px) {
+      .projects-grid { gap: 1.2em; }
       .project-card { width: 45%; min-width: 180px; }
-      .projects-grid { gap: 1.5em; }
-      .project-card img { max-width: 100%; height: 140px; }
+      .project-card img { max-width: 100%; height: 120px; }
     }
     @media (max-width: 700px) {
-      .projects-grid { flex-direction: column; gap: 1.5em; }
+      .projects-grid { flex-direction: column; gap: 1em; }
       .project-card { width: 95%; min-width: unset; }
-      .project-card img { max-width: 100%; height: 120px;}
+      .project-card img { max-width: 100%; height: 110px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>My Projects</h1>
+    <h1>Nana Chang</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
     <div class="projects-grid">

@@ -5,10 +5,53 @@
   <title>Nana Chang – Academic Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 3em auto 2em auto;
+      max-width: 900px;
+      gap: 2.5em;
+    }
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #003366;
+      box-shadow: 0 4px 24px #eee;
+      background: #fff;
+      display: block;
+    }
+    .hero-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .hero-name {
+      font-size: 3em;
+      font-weight: bold;
+      color: #003366;
+      margin-bottom: .3em;
+      line-height: 1.1;
+    }
+    .hero-desc {
+      font-size: 1.25em;
+      color: #444;
+      margin-top: 0;
+    }
+    @media (max-width: 700px) {
+      .hero-container { flex-direction: column; gap: 1.2em; }
+      .hero-content { align-items: center; text-align: center; }
+      .hero-name { font-size: 2em; }
+      .profile-pic { width: 160px; height: 160px; }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Nana Chang</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -19,10 +62,15 @@
     </nav>
   </header>
   <main>
-    <section>
-      <h2>Welcome!</h2>
-      <p>This is the academic homepage of Nana Chang. I am a 3rd year Biomedical Engineering Student in UBC.</p>
-      <img src="assets/profile_photo.jpg" alt="Profile photo" style="max-width:200px;">
+    <section class="hero-container">
+      <img class="profile-pic" src="assets/profile_photo.jpg" alt="Profile photo">
+      <div class="hero-content">
+        <div class="hero-name">Nana Chang</div>
+        <div class="hero-desc">
+          3rd year Biomedical Engineering Student at UBC.<br>
+          Welcome to my academic portfolio!
+        </div>
+      </div>
     </section>
   </main>
   <footer>

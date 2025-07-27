@@ -15,56 +15,58 @@
       display: flex;
       flex-direction: row;
       overflow-x: auto;
-      gap: 2rem;
-      padding: 2rem 0 1rem 0;
+      gap: 1rem;
+      padding: 1rem 0 0.5rem 0;
       background: #f8f8f8;
       border-bottom: 1px solid #e0e0e0;
       position: sticky;
       bottom: 0;
       z-index: 10;
       margin-bottom: 0;
+      min-height: 120px;
+      max-height: 130px;
     }
     .project-thumb {
-      min-width: 320px;
-      max-width: 340px;
+      min-width: 150px;
+      max-width: 160px;
       background: #fff;
-      border-radius: 18px;
+      border-radius: 12px;
       box-shadow: 0 2px 8px #eee;
       transition: box-shadow 0.2s, transform 0.2s;
       cursor: pointer;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 1rem;
+      padding-bottom: 0.5rem;
       border: 2px solid transparent;
     }
     .project-thumb.selected, .project-thumb:focus, .project-thumb:hover {
       box-shadow: 0 4px 16px #1DCD9F33;
       border-color: #1DCD9F;
-      transform: translateY(-5px) scale(1.025);
+      transform: translateY(-2px) scale(1.035);
     }
     .project-thumb img {
       width: 100%;
-      height: 180px;
+      height: 70px;
       object-fit: cover;
-      border-radius: 16px 16px 0 0;
+      border-radius: 10px 10px 0 0;
     }
     .project-thumb-title {
       font-weight: bold;
-      font-size: 1.18em;
+      font-size: 0.95em;
       color: #1DCD9F;
       text-align: center;
-      margin: 0.8em 0 0.2em 0;
+      margin: 0.4em 0 0.1em 0;
     }
     .project-thumb-btn {
-      margin-top: 0.5em;
+      margin-top: 0.2em;
       color: #fff;
       background: #1DCD9F;
       border: none;
-      padding: 0.5em 1.6em;
-      border-radius: 8px;
+      padding: 0.2em 1em;
+      border-radius: 6px;
       font-weight: 600;
-      font-size: 1em;
+      font-size: 0.95em;
       cursor: pointer;
       transition: background 0.2s;
     }
@@ -146,12 +148,14 @@
         height: 110px;
       }
       .project-gallery-bar {
-        gap: 0.8rem;
-        padding: 1rem 0 0.5rem 0;
+        gap: 0.6rem;
+        padding: 0.5rem 0 0.25rem 0;
+        min-height: 90px;
+        max-height: 110px;
       }
       .project-thumb {
-        min-width: 80vw;
-        max-width: 95vw;
+        min-width: 60vw;
+        max-width: 85vw;
       }
     }
   </style>
@@ -258,7 +262,7 @@
         key: "resin-bone",
         title: "3D Resin Printing of Trabecular Bone Structures",
         date: "4/2024 – 8/2024",
-        images: ["assets/boneprint1.jpg", "assets/boneprint2.jpg"],
+        images: ["assets/profile_photo.jpg", "assets/resin_bone2.jpg", "assets/resin_bone3.jpg"],
         summary: "Developed a reliable method to resin 3D print trabecular bone structures.",
         goal: "Develop a reliable method to resin 3D print trabecular bone structures for future mechanical testing.",
         achievements: [
@@ -393,6 +397,7 @@
         thumb.innerHTML = `
           <img src="${prj.images[0]}" alt="${prj.title} thumbnail"/>
           <div class="project-thumb-title">${prj.title}</div>
+          <button class="project-thumb-btn">View More</button>
         `;
         thumb.onclick = () => {
           renderProjectDetail(idx);

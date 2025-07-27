@@ -95,7 +95,7 @@
     }
     .project-detail-imgs img {
       width: 320px;
-      height: 220px;
+      height: 320px;
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 2px 8px #ddd;
@@ -397,7 +397,7 @@
         thumb.className = 'project-thumb' + (idx===selectedIdx?' selected':'');
         thumb.tabIndex = 0;
         thumb.innerHTML = `
-          <img src="${prj.images[0]}" alt="${prj.title} thumbnail" style="width:80px; height:80px;aspect-ratio:1/1;"/>
+          <img src="${prj.images[0]}" alt="${prj.title} thumbnail" style="width:100px; height:100px;aspect-ratio:1/1;"/>
           <div class="project-thumb-title" style="font-size:0.85em;">${prj.title}</div>
         `;
         thumb.onclick = () => {

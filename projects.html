@@ -223,7 +223,7 @@
       },
       {
         key: "bracket-gen-design",
-        title: "Generative Design Optimization of Bracket",
+        title: "Generative Design of Bracket",
         date: "4/2025",
         images: ["assets/bracket1.jpg", "assets/bracket2.jpg", "assets/bracket3.jpg"],
         summary: "Redesigned an aircraft bracket for additive manufacturing to reduce weight and waste.",
@@ -262,7 +262,7 @@
       },
       {
         key: "resin-bone",
-        title: "3D Resin Printing of Trabecular Bone Structures",
+        title: "3D Resin Printing of Bone Structures",
         date: "4/2024 – 8/2024",
         images: ["assets/boneprint1.jpg", "assets/boneprint2.jpg"],
         summary: "Developed a reliable method to resin 3D print trabecular bone structures.",
@@ -397,7 +397,7 @@
         thumb.className = 'project-thumb' + (idx===selectedIdx?' selected':'');
         thumb.tabIndex = 0;
         thumb.innerHTML = `
-          <img src="${prj.images[0]}" alt="${prj.title} thumbnail" style="aspect-ratio:1/1;"/>
+          <img src="${prj.images[0]}" alt="${prj.title} thumbnail" style="width:80px; height:80px;aspect-ratio:1/1;"/>
           <div class="project-thumb-title" style="font-size:0.85em;">${prj.title}</div>
         `;
         thumb.onclick = () => {

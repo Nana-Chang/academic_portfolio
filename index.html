@@ -1,80 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Nana Chang – Academic Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .hero-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 3em auto 2em auto;
-      max-width: 900px;
-      gap: 2.5em;
-    }
-    .profile-pic {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid #003366;
-      box-shadow: 0 4px 24px #eee;
-      background: #fff;
-      display: block;
-    }
-    .hero-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .hero-name {
-      font-size: 3em;
-      font-weight: bold;
-      color: #003366;
-      margin-bottom: .3em;
-      line-height: 1.1;
-    }
-    .hero-desc {
-      font-size: 1.25em;
-      color: #444;
-      margin-top: 0;
-    }
-    @media (max-width: 700px) {
-      .hero-container { flex-direction: column; gap: 1.2em; }
-      .hero-content { align-items: center; text-align: center; }
-      .hero-name { font-size: 2em; }
-      .profile-pic { width: 160px; height: 160px; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cv.html">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="hero-container">
-      <img class="profile-pic" src="assets/profile_photo.jpg" alt="Profile photo">
-      <div class="hero-content">
-        <div class="hero-name">Nana Chang</div>
-        <div class="hero-desc">
-          3rd year Biomedical Engineering Student at UBC.<br>
-          Welcome to my academic portfolio!
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio / Nana Chang</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet" />
+    <link rel="icon" href="assets/profile_photo.jpg" type="image/x-icon">
+    <style>
+      body {
+        background: #fff !important;
+        color: #222;
+      }
+      section, .bg-black, .bg-[#0f0f0f] {
+        background: #fff !important;
+        color: #222;
+      }
+      .text-white { color: #222 !important; }
+      .text-black { color: #222 !important; }
+      .bg-white { background: #fff !important; }
+      .bg-black, .bg-[#0f0f0f] { background: #fff !important; }
+      .border, .border-gray-800 { border-color: #e0e0e0 !important; }
+      .shadow-xl, .shadow-lg, .shadow, .hover\:shadow-2xl, .hover\:shadow-xl {
+        box-shadow: 0 2px 8px #eee !important;
+      }
+      .bg-[#1DCD9F] { background: #1DCD9F !important; color: #fff !important; }
+      .text-[#1DCD9F] { color: #1DCD9F !important; }
+      .category-label:hover, .icon-content:hover { color: #1DCD9F !important; }
+      a { color: #1DCD9F; }
+      a:hover { color: #17b890; }
+      /* Remove grayscale hover for profile image on white bg */
+      #about-img { filter: none !important; }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="position-relative container-fluid min-vh-100 d-flex justify-content-center align-items-center text-white overflow-hidden" style="background-color: #fff">
+      <div id="particles-hero" class="position-absolute w-100 h-100 top-0 start-0" style="z-index: 0"></div>
+      <div class="container text-center position-relative" style="z-index: 1">
+        <h1 class="display-4 fw-bold">
+          <span class="me-2">Hi, I'm</span>
+          <button class="button" data-text="Nana Chang">
+            <span class="actual-text">&nbsp;Nana Chang&nbsp;</span>
+            <span aria-hidden="true" class="hover-text">&nbsp;Nana Chang&nbsp;</span>
+          </button>
+        </h1>
+        <p class="lead mt-3">
+          Biomedical Engineering Student passionate about biomechanics, assistive devices, and research for healthcare impact.
+        </p>
+        <a href="#projects" class="shadow__btn mt-4">View Projects</a>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 px-6">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 px-4">
+        <!-- Profile Image -->
+        <div class="flex-shrink-0 w-64 h-64 rounded-xl overflow-hidden shadow-lg" id="about-img">
+          <img src="./assets/profile_photo.jpg" alt="Nana Chang" class="w-full h-full object-cover" />
+        </div>
+        <!-- Text Content -->
+        <div class="max-w-2xl" id="about-text">
+          <h2 class="text-3xl md:text-4xl font-semibold leading-snug mb-4">
+            I'm <span class="text-[#1DCD9F] font-bold">Nana Chang</span>, a Biomedical Engineering Student focused on research, assistive technology, and design.
+          </h2>
+          <p class="text-lg leading-relaxed mb-6">
+            Currently studying at the University of British Columbia (UBC), I specialize in biomechanics, motion analysis, and the design of innovative devices to improve quality of life.
+          </p>
+          <p class="text-lg leading-relaxed mb-6">
+            I am passionate about integrating cutting-edge technology with healthcare, especially in the areas of motion capture, prosthetics, robotics, and deep learning for medical imaging. My experience spans academic research, engineering design teams, and hands-on prototyping.
+          </p>
+          <!-- Social Icons -->
+          <ul class="example-2" style="display: flex; justify-content: flex-start; gap: 24px;">
+            <li class="icon-content">
+              <a href="mailto:DeliceChangNY@gmail.com" aria-label="Email" data-social="email">
+                <div class="filled"></div>
+                <i class="fas fa-envelope" style="font-size: 2rem;"></i>
+              </a>
+              <div class="tooltip">Email</div>
+            </li>
+            <li class="icon-content">
+              <a href="https://linkedin.com/in/nanachang/" aria-label="LinkedIn" data-social="linkedin" target="_blank">
+                <div class="filled"></div>
+                <i class="fab fa-linkedin" style="font-size: 2rem;"></i>
+              </a>
+              <div class="tooltip">LinkedIn</div>
+            </li>
+            <li class="icon-content">
+              <a href="https://bit.ly/41inaq3" aria-label="Portfolio" data-social="portfolio" target="_blank">
+                <div class="filled"></div>
+                <i class="fas fa-globe" style="font-size: 2rem;"></i>
+              </a>
+              <div class="tooltip">Portfolio</div>
+            </li>
+          </ul>
+          <!-- Download Resume Button -->
+          <div class="flex align-items-center justify-content-center mt-8" style="gap: 50px">
+            <a href="./assets/cv.pdf" download>
+              <button class="bg-[#1DCD9F] text-white px-6 py-2 rounded-lg font-semibold transition hover:bg-[#17b890]">
+                Download CV
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Nana Chang</p>
-  </footer>
-</body>
+
+    <!-- Projects Section -->
+    <section id="projects" class="relative py-20 px-6 overflow-hidden">
+      <div class="relative z-10">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4">Projects</h2>
+          <p class="text-lg">Selected research, engineering, and design projects.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+          <!-- Project 1 -->
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+            <a href="project-eeg-robot.html">
+              <img src="./assets/eeg_robot1.jpg" alt="EEG Controlled Bipedal Robot" class="w-full h-60 object-cover"/>
+            </a>
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-2">EEG Controlled Bipedal Robot</h3>
+              <p class="mb-4">Integrating EEG signals with deep learning for movement classification and motor control. Optimized structure, 3D printing, and PCB design for robust assistive robotics.</p>
+              <a href="project-eeg-robot.html" class="text-[#1DCD9F] font-semibold">Details &rarr;</a>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+            <a href="project-exoskeleton-sim.html">
+              <img src="./assets/exo1.jpg" alt="Exoskeleton Validation with Simulation" class="w-full h-60 object-cover"/>
+            </a>
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-2">Exoskeleton Validation with Simulation</h3>
+              <p class="mb-4">Validated exoskeleton assistance efficacy by biomechanical simulation, motion capture, and ergonomic optimization.</p>
+              <a href="project-exoskeleton-sim.html" class="text-[#1DCD9F] font-semibold">Details &rarr;</a>
+            </div>
+          </div>
+          <!-- Add more projects as needed -->
+        </div>
+        <div class="mt-12 text-center">
+          <a class="bg-[#1DCD9F] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#17b890] transition-all" href="project.html">
+            See All Projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-form" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+          <p class="text-lg">Let's discuss your next project or research collaboration!</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-2xl font-semibold mb-4 text-[#1DCD9F]">Let's Connect</h3>
+              <p class="mb-6">I'm always open to discussing research, engineering, or new opportunities in healthcare technology.</p>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-[#1DCD9F] rounded-full flex items-center justify-center">
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <p class="text-sm">Email</p>
+                  <p>DeliceChangNY@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-[#1DCD9F] rounded-full flex items-center justify-center">
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <p class="text-sm">Location</p>
+                  <p>Vancouver, BC, Canada</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-[#1DCD9F] rounded-full flex items-center justify-center">
+                  <i class="fas fa-clock text-white"></i>
+                </div>
+                <div>
+                  <p class="text-sm">Response Time</p>
+                  <p>Within 48 hours</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Form -->
+          <div class="bg-white text-black rounded-2xl p-8 shadow-xl">
+            <form id="contactForm" class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label for="firstName" class="block text-sm font-medium mb-2">First Name <span style="color: red">*</span></label>
+                  <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1DCD9F] focus:border-transparent transition-all" placeholder="Your First Name">
+                </div>
+                <div>
+                  <label for="lastName" class="block text-sm font-medium mb-2">Last Name <span style="color: red">*</span></label>
+                  <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1DCD9F] focus:border-transparent transition-all" placeholder="Your Last Name">
+                </div>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2">Email <span style="color: red">*</span></label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1DCD9F] focus:border-transparent transition-all" placeholder="your@email.com">
+              </div>
+              <div>
+                <label for="subject" class="block text-sm font-medium mb-2">Subject <span style="color: red">*</span></label>
+                <select id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1DCD9F] focus:border-transparent transition-all">
+                  <option value="">Select a subject</option>
+                  <option value="project-inquiry">Project Inquiry</option>
+                  <option value="research-collab">Research Collaboration</option>
+                  <option value="general">General Message</option>
+                </select>
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium mb-2">Message <span style="color: red">*</span></label>
+                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1DCD9F] focus:border-transparent transition-all resize-none" placeholder="How can I help you?"></textarea>
+              </div>
+              <button type="submit" id="submitBtn" class="w-full bg-[#1DCD9F] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#17b890] transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-[#1DCD9F] focus:ring-offset-2">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="text-center py-6 text-sm text-gray-500" style="background:#f7f7f7;">
+      &copy; 2025 Nana Chang. All rights reserved.
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

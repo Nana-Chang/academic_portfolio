@@ -398,8 +398,7 @@
         thumb.tabIndex = 0;
         thumb.innerHTML = `
           <img src="${prj.images[0]}" alt="${prj.title} thumbnail" style="aspect-ratio:1/1;"/>
-          <div class="project-thumb-title">${prj.title}</div>
-          <button class="project-thumb-btn">View More</button>
+          <div class="project-thumb-title" style="font-size:0.85em;">${prj.title}</div>
         `;
         thumb.onclick = () => {
           renderProjectDetail(idx);
